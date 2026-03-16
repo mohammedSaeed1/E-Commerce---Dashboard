@@ -12,7 +12,6 @@ export default function SubCategories() {
   const [mode, setMode] = useState(null)
   const [selectedSubCategory, setSelectedSubCategory] = useState(null)
   const [showDeleteModal, setShowDeleteModal] = useState(false)
-  const [imagePreview, setImagePreview] = useState(null)
 
   const formik = useFormik({
     enableReinitialize: true,
@@ -63,13 +62,11 @@ export default function SubCategories() {
 
   function openAdd() {
     setSelectedSubCategory(null)
-    setImagePreview(null)
     setMode("add")
   }
 
   function openEdit(cat) {
     setSelectedSubCategory(cat)
-    setImagePreview(null)
     setMode("update")
   }
 
@@ -81,7 +78,6 @@ export default function SubCategories() {
   function closeModal() {
     setMode(null)
     setSelectedSubCategory(null)
-    setImagePreview(null)
     formik.resetForm()
   }
 
