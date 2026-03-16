@@ -21,7 +21,7 @@ export default function Dashboard() {
       ),
     },
     {
-      to: "/dashboard/categories",
+      to: "/categories",
       label: "Categories",
       badge: "12",
       icon: (
@@ -31,7 +31,7 @@ export default function Dashboard() {
       ),
     },
     {
-      to: "/dashboard/subcategories",
+      to: "/subcategories",
       label: "SubCategories",
       badge: "12",
       icon: (
@@ -41,7 +41,7 @@ export default function Dashboard() {
       ),
     },
     {
-      to: "/dashboard/orders",
+      to: "/orders",
       label: "Orders",
       badge: "12",
       icon: (
@@ -51,7 +51,7 @@ export default function Dashboard() {
       ),
     },
     {
-      to: "/dashboard/products",
+      to: "/products",
       label: "Products",
       badge: null,
       icon: (
@@ -62,7 +62,7 @@ export default function Dashboard() {
       ),
     },
     {
-      to: "/dashboard/coupons",
+      to: "/coupons",
       label: "Coupons",
       badge: "3",
       icon: (

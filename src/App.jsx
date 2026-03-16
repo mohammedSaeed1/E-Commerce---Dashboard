@@ -3,12 +3,12 @@ import './App.css'
 import Register from './Components/Register/Register'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Categories from './Components/Categories/Categories'
+import SubCategories from './Components/SubCategories/SubCategories'
 
-const router = createBrowserRouter(
-      [{ path: "", element: <Dashboard/>, children:[
-            {index: true, element: <Categories/>}]},
-      { path: "/dashboard", element: <Dashboard/> },
-      { path: "/categories", element: <Categories/> },
+const router = createBrowserRouter([{ path: "", element: <Dashboard/>, children:[
+            {index: true, element: <Categories/>},
+            {path: "categories", element: <Categories/>},
+       {path: "subcategories", element: <SubCategories/>}] },
 ])
 
 
