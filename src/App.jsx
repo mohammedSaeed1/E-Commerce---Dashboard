@@ -1,10 +1,11 @@
 import './App.css'
+import Register from './Components/Register/Register'
 
 function App() {
 
   return (
     <>
-        <h1 className='bg-amber-300'>Mohamed Saeed from App</h1>      
+    <Register/>
     </>
   )
 }
