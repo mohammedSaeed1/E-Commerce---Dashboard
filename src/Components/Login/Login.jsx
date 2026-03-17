@@ -26,7 +26,6 @@ export default function Login() {
       .post("https://nti-ecommerce.vercel.app/api/v1/auth/signIn", values)
       .then((res) => {
         console.log(res.data);
-        localStorage.setItem("token", res.data.token);
         navigate("/categories");
       })
       .catch((err) => {

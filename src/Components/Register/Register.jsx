@@ -1,10 +1,13 @@
 import axios from "axios";
 import { useFormik } from "formik"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup"
 
 export default function Register() {
+ 
 
+  const navigate = useNavigate();
 
   const [isLoading, setIsLoading] = useState(false);
   const [token, setToken] = useState('');
@@ -22,6 +25,7 @@ export default function Register() {
       .then((res) => {
         res.data.message && setToken(res.data.token);
         localStorage.setItem("token", res.data.token);
+        navigate("/login");
       })
       .catch((err) => {
         console.error(err);
