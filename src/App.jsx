@@ -1,12 +1,23 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
+import Register from './Components/Register/Register'
+import Dashboard from './Components/Dashboard/Dashboard'
+import Categories from './Components/Categories/Categories'
+import SubCategories from './Components/SubCategories/SubCategories'
+import Products from './Components/Products/Products'
+
+const router = createBrowserRouter([{ path: "", element: <Dashboard/>, children:[
+            {index: true, element: <Categories/>},
+            {path: "categories", element: <Categories/>},
+       {path: "subcategories", element: <SubCategories/>},
+      {path: "products", element: <Products/>}] },
+])
+
 
 function App() {
 
-  return (
-    <>
-        <h1 className='bg-amber-300'>Mohamed Saeed from App</h1>      
-    </>
-  )
+    return  <RouterProvider router={router}></RouterProvider>
+
 }
 
 export default App
