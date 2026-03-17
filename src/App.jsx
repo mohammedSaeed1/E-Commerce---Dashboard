@@ -9,7 +9,7 @@ import Login from "./Components/Login/Login";
 
 const router = createBrowserRouter([
      { path: "login", element: <Login /> },
-      { path: "signup", element: <Register /> },
+    { path: "signup", element: <Register /> },
   {
     path: "",
     element: <Dashboard />,

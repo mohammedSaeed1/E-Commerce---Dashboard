@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -24,6 +26,8 @@ export default function Login() {
       .post("https://nti-ecommerce.vercel.app/api/v1/auth/signIn", values)
       .then((res) => {
         console.log(res.data);
+        localStorage.setItem("token", res.data.token);
+        navigate("/categories");
       })
       .catch((err) => {
         console.error(err);
