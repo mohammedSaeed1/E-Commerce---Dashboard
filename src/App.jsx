@@ -8,6 +8,8 @@ import Products from "./Components/Products/Products";
 import Login from "./Components/Login/Login";
 
 const router = createBrowserRouter([
+     { path: "login", element: <Login /> },
+      { path: "signup", element: <Register /> },
   {
     path: "",
     element: <Dashboard />,
@@ -16,8 +18,7 @@ const router = createBrowserRouter([
       { path: "categories", element: <Categories /> },
       { path: "subcategories", element: <SubCategories /> },
       { path: "products", element: <Products /> },
-      { path: "login", element: <Login /> },
-      { path: "signup", element: <Register /> },
+     
     ],
   },
 ]);
